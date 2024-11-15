@@ -33,24 +33,18 @@ function render(sunglassesNew) {
       cssClass: sunglassesNew.frame.cssClass,
     },
   };
-  const price =
-    '$' +
-    (sunglassesNew.model.price +
-      sunglassesNew.lenses.price +
-      sunglassesNew.frame.price);
 
-  productDetailsEl.innerHTML =
-    '<h1>' +
-    sunglassesNew.model.name +
-    '</h1>' +
-    '<p>Custom: ' +
-    sunglassesNew.lenses.color +
-    ' lenses, ' +
-    sunglassesNew.frame.color +
-    ' frames</p>' +
-    '<p>' +
-    price +
-    '</p>';
+  const price = `$${
+    sunglassesNew.model.price +
+    sunglassesNew.lenses.price +
+    sunglassesNew.frame.price
+  }`;
+
+  productDetailsEl.innerHTML = `
+  <h1>${sunglassesNew.model.name}</h1>
+  <p>Custom: ${sunglassesNew.lenses.color} lenses, ${sunglassesNew.frame.color} frames</p>
+  <p>${price}</p>
+`;
 
   const currClass = productImage.classList[1];
   productImage.classList.replace(currClass, sunglassesNew.model.cssClass);
