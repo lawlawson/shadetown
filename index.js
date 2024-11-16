@@ -10,11 +10,11 @@ const productLenses = document.getElementsByClassName(
 
 let sunglassesNew = '';
 
-function setSunglasses(sunglassesNew = sunglasses) {
+const setSunglasses = (sunglassesNew = sunglasses) => {
   return sunglassesNew;
-}
+};
 
-function render(sunglassesNew) {
+const render = (sunglassesNew) => {
   sunglassesNew = {
     model: {
       name: sunglassesNew.model.name,
@@ -60,10 +60,10 @@ function render(sunglassesNew) {
     currLensesClass,
     sunglassesNew.lenses.cssClass
   );
-}
+};
 
 //Highlight current selection
-function addHighlight(clickedItem) {
+const addHighlight = (clickedItem) => {
   if (clickedItem.classList.contains('product-thumb')) {
     Array.from(document.getElementsByClassName('product-thumb')).forEach(
       function (thumb) {
@@ -77,7 +77,7 @@ function addHighlight(clickedItem) {
     });
   }
   clickedItem.classList.add('selected');
-}
+};
 
 document.body.addEventListener('click', function (event) {
   const clickedItem = event.target;
