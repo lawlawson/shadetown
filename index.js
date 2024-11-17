@@ -14,7 +14,18 @@ const setSunglasses = (sunglassesNew = sunglasses) => {
   return sunglassesNew;
 };
 
-const render = (sunglassesNew = sunglasses) => {
+const render = (
+  sunglassesNew = {
+    model: {
+      name: 'Aviator',
+      price: 300,
+      thumbImg: '/images/thumb-aviator.png',
+      cssClass: 'frame-aviator',
+    },
+    lenses: { color: 'sepia', price: 20, cssClass: 'color-rainbow' },
+    frame: { color: 'rose', price: 0, cssClass: 'color-charcoal' },
+  }
+) => {
   const {
     model: { name, price: modelPrice, thumbImg, cssClass: modelCssClass },
     lenses: {
