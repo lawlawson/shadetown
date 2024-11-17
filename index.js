@@ -14,23 +14,33 @@ const setSunglasses = (sunglassesNew = sunglasses) => {
   return sunglassesNew;
 };
 
-const render = (sunglassesNew) => {
+const render = (sunglassesNew = sunglasses) => {
+  const {
+    model: { name, price: modelPrice, thumbImg, cssClass: modelCssClass },
+    lenses: {
+      color: lensesColor,
+      price: lensesPrice,
+      cssClass: lensesCssClass,
+    },
+    frame: { color: frameColor, price: framePrice, cssClass: frameCssClass },
+  } = sunglassesNew;
+
   sunglassesNew = {
     model: {
-      name: sunglassesNew.model.name,
-      price: sunglassesNew.model.price,
-      thumbImg: sunglassesNew.model.thumbImg,
-      cssClass: sunglassesNew.model.cssClass,
+      name,
+      price: modelPrice,
+      thumbImg,
+      cssClass: modelCssClass,
     },
     lenses: {
-      color: sunglassesNew.lenses.color,
-      price: sunglassesNew.lenses.price,
-      cssClass: sunglassesNew.lenses.cssClass,
+      color: lensesColor,
+      price: lensesPrice,
+      cssClass: lensesCssClass,
     },
     frame: {
-      color: sunglassesNew.frame.color,
-      price: sunglassesNew.frame.price,
-      cssClass: sunglassesNew.frame.cssClass,
+      color: frameColor,
+      price: framePrice,
+      cssClass: frameCssClass,
     },
   };
 
