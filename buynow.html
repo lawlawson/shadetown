@@ -15,7 +15,69 @@
         <img src="./images/logo.png" alt="Shadetown" class="logo" />
         <p class="byline">home of custom eyewear</p>
       </header>
-      <main class="main"></main>
+      <main class="main">
+        <body>
+          <form class="payment-form">
+            <h2>Payment Form</h2>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@example.com"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card-number"
+                placeholder="1234 5678 9012 3456"
+                maxlength="19"
+                required />
+            </div>
+            <div class="form-group">
+              <label>Expiration Date (MM/YY)</label>
+              <div class="form-inline">
+                <input
+                  type="text"
+                  name="expiry-month"
+                  placeholder="MM"
+                  maxlength="2"
+                  required />
+                <input
+                  type="text"
+                  name="expiry-year"
+                  placeholder="YY"
+                  maxlength="2"
+                  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input
+                type="text"
+                id="cvc"
+                name="cvc"
+                placeholder="123"
+                maxlength="3"
+                required />
+            </div>
+            <button type="submit" class="pay-button">Pay</button>
+          </form>
+        </body>
+      </main>
     </div>
     <footer class="footer">
       <nav>
